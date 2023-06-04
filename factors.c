@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    char line[MAX_LINE_LENGTH];
+    char line[1024];
     while (fgets(line, sizeof(line), file) != NULL) {
         if (line && line[0] != '\n')
             factorize(atoi(line));
