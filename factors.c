@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void factorize(int n) {
     int i;
@@ -22,9 +23,10 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    int number;
-    while (fscanf(file, "%d\n", &number) != EOF) {
-        factorize(number);
+    char line[MAX_LINE_LENGTH];
+    while (fgets(line, sizeof(line), file) != NULL) {
+        if (line && line[0] != '\n')
+            factorize(atoi(line));
     }
 
     fclose(file);
