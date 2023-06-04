@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    char line[1024];
+    char line[100];
     while (fgets(line, sizeof(line), file) != NULL) {
         if (line[0] > '0' && line[0] <= '9' && line[0] != '\n')
             factorize(atoll(line));
