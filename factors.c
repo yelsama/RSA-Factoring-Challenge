@@ -5,7 +5,7 @@ void factorize(long long int n) {
     long long int i;
     for (i = 2; i <= n / 2; i++) {
         if (n % i == 0) {
-            printf("%lld=%lld*%lld\n", n, i, n / i);
+            printf("%lld=%lld*%lld\n", n, n / i, i);
 			return;
         }
     }
