@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void factorize(int n) {
+void factorize(long long int n) {
     int i;
     for (i = 2; i <= n / 2; i++) {
         if (n % i == 0) {
-            printf("%d=%d*%d\n", n, i, n / i);
+            printf("%lld=%lld*%lld\n", n, i, n / i);
 			return;
         }
     }
