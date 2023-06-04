@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 void factorize(long long int n) {
-    int i;
+    long long int i;
     for (i = 2; i <= n / 2; i++) {
         if (n % i == 0) {
             printf("%lld=%lld*%lld\n", n, i, n / i);
