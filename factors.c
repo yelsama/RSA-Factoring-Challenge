@@ -27,6 +27,8 @@ int main(int argc, char *argv[]) {
     while (fgets(line, sizeof(line), file) != NULL) {
         if (line[0] && line[0] != '\n')
             factorize(atoll(line));
+        else
+            break;
     }
 
     fclose(file);
