@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
     }
 
     char line[100];
-    while (fgets(line, sizeof(line), file) != NULL) {
+    while (fgets(line, 100, file) != NULL) {
         if (line[0] > '0' && line[0] <= '9' && line[0] != '\n')
             factorize(atoll(line));
         else
