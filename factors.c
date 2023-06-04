@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 
     char line[1024];
     while (fgets(line, sizeof(line), file) != NULL) {
-        factorize(atoi(line));
+        factorize(atoll(line));
     }
 
     fclose(file);
